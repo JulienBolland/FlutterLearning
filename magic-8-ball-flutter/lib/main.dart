@@ -38,7 +38,7 @@ class _BallState extends State<Ball> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
       child: FlatButton(
         onPressed: (){
           changeImage();
@@ -47,6 +47,7 @@ class _BallState extends State<Ball> {
           child: Image.asset("images/ball$ballNb.png"),
         ),
       ),
+      duration: Duration(seconds: 1),
     );
   }
 }
